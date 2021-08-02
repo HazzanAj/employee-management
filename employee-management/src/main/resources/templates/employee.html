@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>employee</title>
+</head>
+<body>
+
+<table><tbody><tr>
+
+    <td><h6><a href=""><img src="{{employee?.imageUrl}}" alt="" class="img-fluid rounded-circle w-60"></a> </h6></td>
+    <td> <h5>{{employee?.name}}</h5></td><br>
+    <td> <h5>{{employee?.jobTitle}}</h5></td><br>
+    <td> <h5>{{employee?.email}}</h5></td><br>
+    <td> <h5> {{employee?.phone}}</h5></td><br>
+
+</tbody></table>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<h4 style="font-family: Serif;text-shadow:white; color: #091b29; text-align: center"> EMPLOYEES</h4>
+<br>
+<div class="container">
+    <div class="row">
+
+        <!-- perform for loop here-->
+        <div *ngFor="let employee of employees" class="col-md-6 col-xl-3">
+            <div class="card m-b-30">
+                <div class="card-body row">
+                    <div class="col-6">
+                        <a href=""><img src="{{employee?.imageUrl}}" alt="" class="img-fluid rounded-circle w-60"></a>
+                    </div>
+                    <div class="col-6 card-title align-self-center mb-0">
+                        <h5>{{employee?.name}}</h5>
+                        <p class="m-0">{{employee?.jobTitle}}</p>
+                    </div>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><i class="fa fa-envelope float-right"></i>{{employee?.email}}</li>
+                    <li class="list-group-item"><i class="fa fa-phone float-right"></i>{{employee?.phone}}</li>
+                </ul>
+
+                <div class="card-body">
+                    <div class="float-right btn-group btn-group-sm">
+                        <a href="#" class="btn btn-primary tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-pencil"></i> </a>
+                        <a href="#" class="btn btn-secondary tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-times"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
